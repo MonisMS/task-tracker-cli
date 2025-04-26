@@ -1,0 +1,24 @@
+{
+  "name": "task-tracker-cli",
+  "version": "1.0.0",
+  "description": "A simple task tracker in terminal",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MonisMS/task-tracker-cli.git"
+  },
+  "keywords": [
+    "backend",
+    "express"
+  ],
+  "author": "Monis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MonisMS/task-tracker-cli/issues"
+  },
+  "homepage": "https://github.com/MonisMS/task-tracker-cli#readme"
+}
