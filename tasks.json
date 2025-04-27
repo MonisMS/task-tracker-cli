@@ -1,7 +1,34 @@
 [
   {
-    "id": 1745670656516,
-    "description": "complete and get it checked",
-    "status": "todo"
+    "id": 1745737408527,
+    "description": "kamao bsdk aur rr mat karo",
+    "completed": true,
+    "inProgress": false
+  },
+  {
+    "id": 1745739276489,
+    "description": "Buy groceries",
+    "completed": false,
+    "inProgress": true
+  },
+  {
+    "id": 1745739285499,
+    "description": "Complete the project report by Friday",
+    "completed": false,
+    "inProgress": false
+  },
+  {
+    "id": 1745739292649,
+    "description": "Call the plumber @ 5 PM!",
+    "completed": false,
+    "inProgress": false
+  },
+  {
+    "id": 1745740666324,
+    "description": "go to gym",
+    "completed": false,
+    "inProgress": false,
+    "createdAt": "2025-04-27T07:57:46.324Z",
+    "updatedAt": "2025-04-27T07:57:46.325Z"
   }
 ]
