@@ -1,58 +1,114 @@
-link:[https://roadmap.sh/projects/task-tracker]
+
 # Task Tracker CLI
 
-A command-line task management application that helps you organize and track your tasks efficiently.
+A simple command-line interface (CLI) application for managing tasks. This tool allows you to add, update, delete, and list tasks, as well as mark tasks as completed or in progress.
+[Task Tracker Project Roadmap](https://roadmap.sh/projects/task-tracker)
+---
 
 ## Features
 
-- Create, view, update, and delete tasks
-- Mark tasks as complete or incomplete
-- Filter tasks by status or priority
-- View task statistics and summaries
-- Export tasks to different formats
+- Add new tasks with descriptions.
+- Update the description of an existing task.
+- Delete tasks by their ID.
+- Mark tasks as **in-progress** or **completed**.
+- List tasks filtered by their status (`done`, `in-progress`, or `to-do`).
+- View help for available commands.
+
+---
+
+## Prerequisites
+
+- **Node.js**: Ensure you have Node.js installed on your system.
+- **Dependencies**: Install the required dependencies using `npm install`.
+
+---
 
 ## Installation
 
-```bash
-npm install -g task-tracker-cli
-```
+1. Clone the repository or download the source code.
+2. Navigate to the project directory.
+3. Install dependencies:
+   ```bash
+   npm install
 
-## Usage
 
-```bash
-# Create a new task
-task add "Complete project documentation" --priority high --due "2023-12-15"
+   Examples
+1. Add a Task
+node [index.js](http://_vscodecontentref_/1) add "Buy groceries"
+Output:
+task add successfully <task_id>
 
-# List all tasks
-task list
+2. Update a Task
+node [index.js](http://_vscodecontentref_/2) update 1234567890 "Buy groceries and vegetables"
 
-# List only incomplete high-priority tasks
-task list --status incomplete --priority high
+Output:
+Task updated successfully
 
-# Mark a task as complete
-task complete 3
+3. Delete a Task
+node [index.js](http://_vscodecontentref_/3) delete 1234567890
 
-# Remove a task
-task delete 2
+Output:
+Task deleted successfully
 
-# Show task statistics
-task stats
-```
+4. Mark a Task as In Progress
+node [index.js](http://_vscodecontentref_/4) mark-in-progress 1234567890
 
-## Configuration
+Output:
+Task marked as in progress
 
-Configure task-tracker by creating a `.taskrc` file in your home directory:
+5. Mark a Task as Completed
+node [index.js](http://_vscodecontentref_/5) mark-completed 1234567890
 
-```
-defaultPriority=medium
-defaultView=incomplete
-dateFormat=YYYY-MM-DD
-```
+Output:
+Task marked as completed
 
-## Contributing
+6. List All Tasks
+node [index.js](http://_vscodecontentref_/6) list
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Output:
+Listing all tasks:
+1234567890. Buy groceries [To-do]
+1234567891. Complete the project report [InProgress]
+1234567892. Pay electricity bill [Done]
 
-## License
+7. List Tasks by Status
+node [index.js](http://_vscodecontentref_/7) list done
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Output:
+Listing done tasks:
+1234567892. Pay electricity bill [Done]
+
+
+File Structure
+index.js: Main application logic.
+tasks.json: Stores the tasks in JSON format.
+Dependencies
+fs: For reading and writing tasks to tasks.json.
+chalk: For colorful console output.
+Install dependencies using:
+npm install chalk
+
+Error Handling
+If an invalid command or status is provided, the application will display an error message.
+If no tasks are found for a given filter, it will display:
+Help Command
+To view all available commands, run:
+node [index.js](http://_vscodecontentref_/8) help
+
+Output:
+
+Available commands:
+add <description>           Add a new task
+update <id> <newDescription>  Update a task's description
+delete <id>                 Delete a task
+mark-in-progress <id>       Mark a task as in progress
+mark-completed <id>         Mark a task as completed
+list [done|in-progress|to-do] List tasks (all, done, in-progress, to-do)
+
+Notes
+
+The tasks.json file will be created automatically if it does not exist.
+Task IDs are generated using Date.now() to ensure uniqueness.
+License
+
+This project is licensed under the MIT License. Feel free to use and modify it as needed. ```
