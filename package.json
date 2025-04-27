@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {},
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MonisMS/task-tracker-cli.git"
